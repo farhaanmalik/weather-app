@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-head">
+            <h3>the.weather</h3>
+            <form action="" id="myForm">
+                <input type="text" placeholder="Search location" id="city" >
+                <button id="searchCity">Search</button>
+            </form>
+        </header>
+        <div class="row">
+            <div class="col-1">
+                <img src="png.png" alt="">
+                <div class="weather-info">
+                    <div class="col-1-1">
+                        <span class="num" id="temp"></span>
+                        <span class="deg"> &#176C</span>
+                        <!-- <span class="weather" id="weather">Haze</span> -->
+                    </div>
+                    <div class="col-1-2">
+                        <div class="date">
+                            <span class="text__color" id="full__date"></span>
+                        </div>
+                        <span class="city" id="cityName"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+               <div class="weather-details">
+                    <h3>Weather Details</h3>
+                    <div class="w-bottom">
+                        <ul>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Feels like: <span id="feels_like"></span>&#176C</li>
+                            <li>Wind: <span id="wind_speed"></span> km/h</li>
+                        </ul>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
