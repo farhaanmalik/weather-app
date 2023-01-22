@@ -14,7 +14,7 @@ RapidApi Hub : https://rapidapi.com/hub
 Used API in it : https://rapidapi.com/apininjas/api/weather-by-api-ninjas/
 
 # What I learned 
-During this I have leanred many things like:
+During this project I have leanred many things like:
 - Fetching API
 - To get response from API
 - To show response on client-side
