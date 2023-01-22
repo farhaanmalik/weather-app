@@ -9,13 +9,13 @@
     letter-spacing: 1px;
 }
 body{
-    padding: 10px;
     background-color: #000;
+    overflow: hidden;
 }
 .container{
-    background-color: #222222;
+    background-color: #1f1f1f;
     max-width: 1000px;
-    margin: 10px auto;
+    margin: 20px auto;
     box-shadow: 0px 10px 10px #2f2f2f;
     padding: 20px;
     border-radius: 10px;
@@ -30,22 +30,22 @@ form input{
     font-size: 18px;
     outline: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
     box-shadow: 0px 0px 2px #939393;
     background: transparent;
     margin: 10px 0px;
-    color: #f9f9f9;
+    color: #ffffff;
 }
 form input:focus{
-    box-shadow: 0px 0px 2px #ffffff;
+    box-shadow: 0px 0px 3px #ffffff;
 }
 form button{
     border: none;
     outline: none;
     font-size: 18px;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 8px 12px;
     color: #000000;
     background-color: #f9f9f9;
     box-shadow: 0px 0px 2px #737373;
@@ -98,7 +98,6 @@ form button{
 }
 .w-bottom ul{
     display: flex;
-    flex-wrap: wrap;
 }
 .w-bottom ul li {
     margin: 10px 20px;
@@ -110,13 +109,20 @@ form button{
 
 
 @media screen and (max-width: 580px) {
+    body{
+        background: url(bg.avif) no-repeat center center/cover;
+    }
     .container{
-        margin: 0px auto;
+        background-color: #000000d4;
+        height: 100vh;
+        margin: 0px;
         text-align: center;
+        padding: 20px 10px;
     }
     .top-head{
         display: block;
     }
+
     form{
         margin: 10px 5px;
     }
@@ -125,7 +131,7 @@ form button{
     }
 
     .col-1-1,.col-1-2{
-        padding: 10px;
+        padding: 0px 10px;
     }
     .num, .deg{
         font-size: 40px;
@@ -133,15 +139,22 @@ form button{
     .city{
         font-size: 20px;
     }
+
+    .weather-details{
+        margin-top: 20px;
+        padding: 5px 20px;
+    }
     .weather-details h3{
        margin: 10px auto;
        font-size: 20px;
     }
     .w-bottom ul{
+        display: block;
        justify-content: center;
     }
     .w-bottom ul li{
         font-size: 16px;
+        margin-top: 20px;
     }
     
 }
