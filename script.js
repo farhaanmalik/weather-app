@@ -19,6 +19,7 @@ const getWeather = (city) => {
 	fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
 		.then(response => response.json())
 		.then(response => {
+			console.log(response)
 			return showWeather(response)
 		})
 		.catch(err =>
@@ -31,15 +32,14 @@ weather.innerHTML = `<h3 style="color:white; padding: 20px 5px;">Search and get 
 
 
 const showWeather = (response) => {
-
 	// If the city doesn't exist in API then showing error
 	if (response.error == 'An unexpected error occured.') {
 		weather.innerHTML = `<h3 style="color:red; padding-top: 20px;">${city.value} city doesn't found</h3>`;
-		return
+		return;
 	}
-
-	// Display weather on screen
-	weather.innerHTML = `<div class="col-1">
+	else {
+		// Displaying weather on screen
+		weather.innerHTML = `<div class="col-1">
 		<img src="img/cloud.png" alt="">
 		<div class="weather-info">
 			<div class="col-1-1">
@@ -63,10 +63,12 @@ const showWeather = (response) => {
 			</div>
 	   </div>
 	</div>`;
+	}
 }
 
 // Search other city weather
 searchCity.addEventListener("click", (event) => {
 	event.preventDefault()
+	weather.innerHTML = `<h3 style="color:white; padding: 20px 5px;">Wait a sec...!</h3>`
 	getWeather(city.value)
 })
